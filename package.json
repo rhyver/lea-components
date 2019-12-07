@@ -2,7 +2,8 @@
   "name": "@rhyver/lea-components",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/rhyver/lea-components"
@@ -11,7 +12,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build": "tsc"
+    "build": "tsc",
+    "prepare" : "npm run build",
+    "version" : "npm run format && git add -A src"
   },
   "keywords": [],
   "author": "",
