@@ -1,0 +1,51 @@
+.Button {
+   background-color: var(--primary-color);
+   color: var(--on-primary-color);
+   padding: 0 16px;  
+   height: 32px;
+   min-width: 80px;
+   outline: none;
+   border: none;
+   cursor: pointer;
+   font-size: inherit;
+   text-transform: uppercase;
+   transition: box-shadow 200ms;
+   
+   &.variant-text {
+      background: none;
+      color: var(--primary-color);
+      transition: background, color 0.3s;
+
+      &:hover {
+         background-color: #713A64;
+         color: #ffffff;
+      }
+   }
+
+   &.color-secondary {
+      background: var(--secondary-color);
+      color: var(--on-secondary-color);
+   }
+
+   &:hover, &:focus {
+      box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
+      outline: none;
+      outline-style:none;
+   }
+
+   &::-moz-focus-inner {
+      border: 0;
+   }
+
+   &:active {
+      background-color: var(--primary-color-darker);
+   }
+
+   &:disabled {
+      color:rgba(0, 0, 0, 0.26);
+
+      background-color:rgba(0, 0, 0, 0.12);
+      cursor: not-allowed;
+      box-shadow: none;
+   }
+}

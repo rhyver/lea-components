@@ -1,0 +1,12 @@
+<script>
+   const setCssVarVal = cssVar =>
+      document.documentElement.style
+      .setProperty(cssVar['variable'], cssVar.value);
+
+   setCssVarVal({variable: '--primary-color', value: 'hsl(322, 77%, 66%)'});
+   setCssVarVal({variable: '--on-primary-color', value: 'black'});
+   setCssVarVal({variable: '--primary-color-darker', value: 'hsl(322, 77%, 40%)'});
+
+   console.log('init theme')
+
+</script>

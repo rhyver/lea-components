@@ -1,0 +1,13 @@
+html {
+   background: yellow;
+   --success-color: green;
+   --on-success-color: white;
+   --error-color: red;
+   --on-error-color: white;
+   --primary-color: #EB64B9;
+   --on-primary-color: black;
+   --secondary-color: #ebe6f1;
+   --on-secondary-color: black;
+   --menu-color: #27212E;
+   --on-menu-color: #ffffff;
+}
