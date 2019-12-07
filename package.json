@@ -1,8 +1,8 @@
 {
   "name": "@rhyver/lea-components",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/main.js",
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
@@ -12,9 +12,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build": "tsc",
-    "prepare" : "npm run build",
-    "version" : "npm run format && git add -A src"
+    "build": "rimraf ./dist && webpack",
+    "prepare": "npm run build",
+    "version": "npm run format && git add -A src",
+    "release": "standard-version"
   },
   "keywords": [],
   "author": "",
@@ -36,9 +37,13 @@
     "css-loader": "^3.2.1",
     "node-sass": "^4.13.0",
     "react-docgen-typescript-loader": "^3.6.0",
+    "rimraf": "^3.0.0",
     "sass-loader": "^8.0.0",
+    "standard-version": "^7.0.1",
     "style-loader": "^1.0.1",
     "ts-loader": "^6.2.1",
-    "typescript": "^3.7.3"
+    "typescript": "^3.7.3",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   }
 }
