@@ -1,6 +1,6 @@
 import React from 'react';
-
-import './Button/Button.css';
+import classNames from 'classnames';
+import './Button.css';
 
 export interface IButtonProps {
 	className?: string;
@@ -14,8 +14,14 @@ export interface IButtonProps {
 
 export const LeaButton = React.memo((props: IButtonProps) => {
 	const {className, children, submit, variant, color, ...buttonProps} = props;
+	const btnClass = classNames(
+		'lea-button',
+		className,
+		`variant-${variant}`,
+		`color-${color}`
+	);
 
 	return (
-		<button type={submit ? 'submit' : 'button'} className={`Button variant-${variant} ${className} color-${color}`} {...buttonProps}>{children}</button>
+		<button type={submit ? 'submit' : 'button'} className={btnClass} {...buttonProps}>{children}</button>
 	);
 });

@@ -1,0 +1,3 @@
+{
+   "presets": ["@babel/preset-typescript", "@babel/preset-react", ["transform-rename-import", { "original": "^(.+?)\\.less$", "replacement": "$1.css" }]]
+}

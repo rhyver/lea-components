@@ -1,0 +1,26 @@
+.lea-text-field {
+   display: flex;
+   flex-direction: column;
+   margin: 5px 0;
+   
+   .lea-text-field__label {
+      margin-bottom: 5px;
+   }
+
+   .lea-text-field__input {
+      border: none;
+      border-bottom: 1px solid grey;
+   }
+
+   &.error {
+      .lea-text-field__input {
+         box-shadow: 0 0 0 2px var(--error-color);
+      }
+
+      .lea-text-field__error-message {
+         display: block;
+         color: var(--error-color);
+         margin: 5px 0 0 0;
+      }
+   }
+}

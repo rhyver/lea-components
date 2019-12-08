@@ -1,16 +1,16 @@
 {
    "compilerOptions": {
-      "outDir": "dist",
+      "outDir": "./dist/",
       "target": "es5",
       "lib": [
 			"dom",
 			"dom.iterable",
 			"esnext"
 		],
-      "sourceMap": false,
+      "sourceMap": true,
       "allowJs": false,
       "jsx": "react",
-      "module": "esnext",
+      "module": "es6",
 		"moduleResolution": "node",
       "rootDirs": ["src", "stories"],
       "baseUrl": "src",
@@ -18,10 +18,12 @@
       "noImplicitReturns": true,
       "noImplicitThis": true,
       "noImplicitAny": true,
+      "strict": true,
       "strictNullChecks": true,
       "suppressImplicitAnyIndexErrors": true,
       "noUnusedLocals": true,
       "declaration": true,
+      "declarationMap": true,
       "allowSyntheticDefaultImports": true,
       "experimentalDecorators": true,
       "emitDecoratorMetadata": true
